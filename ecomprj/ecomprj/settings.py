@@ -127,7 +127,11 @@ STATIC_URL = 'static/'
 
 # Configure static and media files
 STATIC_ROOT = os.path.join(BASE_DIR, 'static') # static folder contains (static files images, CSS and JS files, documents, Bootstrap files, ...).
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'staticfiles') # Django calls all the static files used to build this project
+
+# use list to avoir errors
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles')] # Django calls all the static files used to build this project
+
+
 MEDIA_URL = '/media/' # media files are located in this folder
 MEDIA_ROOT = os.path.join(BASE_DIR, "media") # media folder contains the products pictures that the user uploads
 
