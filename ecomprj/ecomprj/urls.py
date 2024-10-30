@@ -17,6 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+
+from core.views import index # search for the view 'index' in views.py file which is inside core folder
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("", index)
 ]
